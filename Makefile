@@ -9,5 +9,8 @@ lint:
 
 build:
 	cargo build --release --manifest-path ./main/Cargo.toml
+
+copy:
+	cp main/target/release/main ./"Rust_Binary"
 		
 all: build test format lint

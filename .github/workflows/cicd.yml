@@ -29,11 +29,11 @@ jobs:
       - name: Save to repository
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: make copy
         run: |
           echo GH_TOKEN: "${GH_TOKEN}"
           git config --global user.name 'github-actions'
           git config --local user.email "action@github.com"
           git add .
-          git add /main/target/release/main
           git commit -m "Added Files" || echo "ignore commit failure, proceed"
           git push
