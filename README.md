@@ -4,7 +4,7 @@
 
 This repositroy contains files to perform CRUD (Create-Read-Update-Delete) operations in a ``SQLite`` Database using ``Rust`` and ``CLI``
 
-Please watch the [Youtube Video](https://youtu.be/957Sv1Bmb1Q) for a brief overview and a demo of code execution and Github Actions.
+Please watch the [Youtube Video](https://youtu.be/PVdduVn6r5s) for a brief overview and a demo of code execution and Github Actions.
 
 The base repo has been created from [IDS-706_rg361_week-5](https://github.com/nogibjj/IDS-706_rg361_week-5) and modified as per requirements.
 
@@ -14,7 +14,7 @@ Created on on 29-Oct-2023
 
 The repository has the ``main`` rust project which performs CRUD operations on a SQLite Database. The file can be interacted via ``CLI`` (Command Line Interface).
 
-The repository automatically generates an ``optimized Rust binary`` using Github Actions which can be downlaoded.
+The repository automatically generates an ``optimized Rust binary`` using Github Actions which is uploaded to the root directory as ``Rust_Binary`` and also can be downlaoded from  the Github Actions.
 
 
 ![Schema](resources/Schema.png)
