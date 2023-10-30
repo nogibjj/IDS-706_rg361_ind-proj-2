@@ -28,7 +28,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // Create a table to store the CSV data
     conn.execute(
-        "CREATE TABLE IF NOT EXISTS data (column1 TEXT, column2 TEXT, column3 TEXT)",
+        "CREATE TABLE IF NOT EXISTS data (column1 TEXT, column2 TEXT, column3 TEXT, column4 TEXT, column5 TEXT)",
         [],
     )?;
 
@@ -39,8 +39,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     for result in rdr.records() {
         let record = result?;
         conn.execute(
-            "INSERT INTO data (column1, column2, column3) VALUES (?1, ?2, ?3)",
-            [&record[0], &record[1], &record[2]],
+            "INSERT INTO data (column1, column2, column3, column4, column5) VALUES (?1, ?2, ?3, ?4, ?5)",
+            [&record[0], &record[1], &record[2], &record[3], &record[4]],
         )?;
     }
 
@@ -49,7 +49,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     // Rename the columns using SQL
     conn.execute("ALTER TABLE data RENAME TO data_old", [])?;
     conn.execute(
-        "CREATE TABLE data AS SELECT column1 AS rank, column2 AS university, column3 AS location FROM data_old",
+        "CREATE TABLE data AS SELECT column1 AS patient, column2 AS sex, column3 AS agegprp, column4 AS bp_before, column5 AS bp_after FROM data_old",
         [],
     )?;
     conn.execute("DROP TABLE data_old", [])?;
