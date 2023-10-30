@@ -35,7 +35,7 @@ jobs:
           echo GH_TOKEN: "${GH_TOKEN}"
           git config --global user.name 'github-actions'
           git config --local user.email "action@github.com"
-          git add .
+          git add Rust_Binary
           git commit -m "Added Results" || echo "ignore commit failure, proceed"
           git push
       - name: Publish Artifact
