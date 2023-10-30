@@ -17,7 +17,7 @@ The repository has the ``main`` rust project which performs CRUD operations on a
 The repository automatically generates an ``optimized Rust binary`` using Github Actions which can be downlaoded.
 
 
-![Schema](resources/schema.png)
+![Schema](resources/Schema.png)
 
 ## Instructions
 
@@ -43,7 +43,7 @@ This will generate the executable in the ``/main/target/release`` directory and 
 
 ## CRUD Operations
 The main.rs file creates a SQLite Databse as defined by the user and enters the data from the provided CSV into the Databse as table 'data'.
-Once the Database is created the user can interact with the file by entering regular SQL commands which the file then processes and return the result.
+Once the Database is created the user can interact with the file by entering regular SQL commands which the file then processes and returns the result.
 
 ### 1.Create
 Sample Input used:
@@ -76,10 +76,10 @@ DELETE  FROM data WHERE sex == "Demo";
 
 
 ### Github Co-Pilot
-The source respository used was made to perform the CRUD opeerations using Python, I used Co-pilot to help convert it to Rust
-1. Creating main.rs. The rust file main.rs has been created with the help of copilot. The week5 mini project has the python code to perform CRUD operation using sqlite. The copilot helped me in translating it into rust code and performing the required action from CLI
+The source respository used was made to perform the CRUD opeerations using Python, I used Co-pilot to help convert it to Rust and Copilit helped in the following ways:
+1. Creating main.rs. The rust file main.rs has been created with the help of copilot. The week-5 mini project has the python code to perform CRUD operation using sqlite. The copilot helped me in translating it into rust code and performing the required action from CLI
 2. The dependencies and packages required for Cargo.toml was added using copilot.
-3. It also helped me in understanding the usage of cargo commands.
+3. It helped me in understanding the usage of cargo commands.
 4. It helped with the format for writing test cases in Rust
 
 Sample Interaction:
