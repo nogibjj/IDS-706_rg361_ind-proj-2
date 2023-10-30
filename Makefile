@@ -1,18 +1,13 @@
-install:
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt
-
 test:
-	python -m pytest -vv --cov=main --cov=mylib test_*.py
+	cargo test --quiet --manifest-path ./main/Cargo.toml
 
 format:	
-	black mylib/*.py 
-	black *.py
+	cargo fmt --manifest-path ./main/Cargo.toml
 
 lint:
-	ruff check *.py mylib/*.py
+	cargo clippy --quiet --manifest-path ./main/Cargo.toml
 
-deploy:
-	#deploy goes here
+build:
+	cargo build --release --manifest-path ./main/Cargo.toml
 		
-all: install test format lint deploy
+all: build test format lint

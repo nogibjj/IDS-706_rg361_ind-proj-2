@@ -27,8 +27,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     let conn = Connection::open(db_path)?;
 
     //Delete the table if it already exists
-    conn.execute("DROP TABLE IF EXISTS data", [])?; 
-    
+    conn.execute("DROP TABLE IF EXISTS data", [])?;
+
     // Create a table to store the CSV data
     conn.execute(
         "CREATE TABLE IF NOT EXISTS data (column1 TEXT, column2 TEXT, column3 TEXT, column4 TEXT, column5 TEXT)",
