@@ -1,6 +1,6 @@
-# CRUD Operations in SQLite DB using Python and CLI
+# Rust CLI Binary to perform CRUD Operations in SQLite DB
 
-[![CI](https://github.com/nogibjj/IDS-706_rg361_week-5/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_week-5/actions/workflows/cicd.yml)
+[![CI](https://github.com/nogibjj/IDS-706_rg361_ind-proj-2/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_ind-proj-2/actions/workflows/cicd.yml)
 
 This repositroy contains files to perform CRUD (Create-Write-Update-Delete) operations in a ``SQLite`` Database using ``Python`` and ``CLI``
 
