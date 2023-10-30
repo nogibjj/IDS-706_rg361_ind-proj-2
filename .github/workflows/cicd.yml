@@ -23,7 +23,7 @@ jobs:
       - name: Archive and Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: ml_pipeline-artifacts
+          name: Binary
           path: ${{ github.workspace }}
         
       - name: Save to repository
@@ -34,8 +34,8 @@ jobs:
           echo GH_TOKEN: "${GH_TOKEN}"
           git config --global user.name 'github-actions'
           git config --local user.email "action@github.com"
-          git add .
-          git commit -m "Added Files" || echo "ignore commit failure, proceed"
+          git add RUST_Binary
+          git commit -m "Added Binary" || echo "ignore commit failure, proceed"
           git push
   deploy:
     needs: build
@@ -45,4 +45,4 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v3
       with:
-        name: ml_pipeline-artifacts
+        name: Binary
