@@ -1,31 +1,26 @@
 name: CI/CD
+
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-env:
-  CARGO_TERM_COLOR: always
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions-rs/toolchain@v1
-      with:
-          toolchain: stable
-          profile: minimal
-          components: clippy, rustfmt
-          override: true
-    - name: build Rust
-      run: make build
-    - name: Format
-      run: make format
-    - name: Lint
-      run: make lint
-    - name: Test
-      run: make test
-    - name: Archive and Upload Artifacts
+      - uses: actions/checkout@v3
+      - name : Build
+        run : make build
+      - name: Test
+        run: make test
+      - name : Format
+        run : make format
+      - name: Lint
+        run: make lint
+      - name: Archive and Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: ml_pipeline-artifacts
@@ -38,17 +33,7 @@ jobs:
           echo GH_TOKEN: "${GH_TOKEN}"
           git config --global user.name 'github-actions'
           git config --local user.email "action@github.com"
-          git add main/test/target/release/main
-          git commit -m "Added Executable" || echo "ignore commit failure, proceed"
-          git push 
-    
-
-  deploy:
-    needs: build
-    steps:
-    - uses: actions/checkout@v3
-
-    - uses: actions/upload-artifact@v3
-      with:
-        name: Rust Binary
-        path: main/test/target/release/main
+          git add .
+          git add /main/target/release/main
+          git commit -m "Added Files" || echo "ignore commit failure, proceed"
+          git push
