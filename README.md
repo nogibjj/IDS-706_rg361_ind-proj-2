@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/nogibjj/IDS-706_rg361_ind-proj-2/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_ind-proj-2/actions/workflows/cicd.yml)
 
-This repositroy contains files to perform CRUD (Create-Write-Update-Delete) operations in a ``SQLite`` Database using ``Rust`` and ``CLI``
+This repositroy contains files to perform CRUD (Create-Read-Update-Delete) operations in a ``SQLite`` Database using ``Rust`` and ``CLI``
 
 Please watch the [Youtube Video](https://youtu.be/957Sv1Bmb1Q) for a brief overview and a demo of code execution and Github Actions.
 
@@ -14,7 +14,7 @@ Created on on 29-Oct-2023
 
 The repository has the ``main`` rust project which performs CRUD operations on a SQLite Database. The file can be interacted via ``CLI`` (Command Line Interface).
 
-The repository automatically generates an ``optimized Rust binary`` using Github Actions.
+The repository automatically generates an ``optimized Rust binary`` using Github Actions which can be downlaoded.
 
 
 ![Schema](resources/schema.png)
