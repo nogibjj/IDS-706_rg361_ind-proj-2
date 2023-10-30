@@ -22,11 +22,11 @@ jobs:
         run : make format
       - name: Lint
         run: make lint
-    - name: Publish Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: my-artifact
-        path: Rust_Binary
+      - name: Publish Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: Rust_Binary
 
   deploy:
     needs: build
