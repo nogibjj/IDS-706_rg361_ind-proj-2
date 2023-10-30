@@ -34,7 +34,7 @@ jobs:
           echo GH_TOKEN: "${GH_TOKEN}"
           git config --global user.name 'github-actions'
           git config --local user.email "action@github.com"
-          git add RUST_Binary
+          git add --force RUST_Binary
           git commit -m "Added Binary" || echo "ignore commit failure, proceed"
           git push
   deploy:
