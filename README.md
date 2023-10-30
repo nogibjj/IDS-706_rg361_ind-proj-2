@@ -51,28 +51,28 @@ Sample Input used:
 cargo run Master.db '../Data/'blood_pressure.csv'
 ```
 
-[create](resources/Create.png)
+![create](resources/Create.png)
 
 ### 2.Read
 Sample Input used:
 ```console
 SELECT * FROM data LIMIT 5;
 ```
-[Read](resources/Read.png)
+![Read](resources/Read.png)
 
 ### 3.Update
 Sample Input used:
 ```console
 UPDATE data set sex = "Demo" where patient == "1";
 ```
-[Update](resources/Update.png)
+![Update](resources/Update.png)
 
 ### 4.Delete
 Sample Input used:
 ```console
 DELETE  FROM data WHERE sex == "Demo";
 ```
-[Delete](resources/Delete.png)
+![Delete](resources/Delete.png)
 
 
 ### Github Co-Pilot
@@ -83,7 +83,7 @@ The source respository used was made to perform the CRUD opeerations using Pytho
 4. It helped with the format for writing test cases in Rust
 
 Sample Interaction:
-[Copilot](resources/copilot.png)
+![Copilot](resources/copilot.png)
 
 
 ## Contents
