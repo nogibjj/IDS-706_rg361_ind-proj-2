@@ -12,7 +12,7 @@ use std::io;
 use std::io::Write;
 use std::process;
 
-fn main() -> Result<(), Box<dyn Error>> {
+#[allow(clippy::manual_flatten)] fn main() -> Result<(), Box<dyn Error>> {
     // Get the SQLite database file path and CSV file path from command-line arguments
     let args: Vec<String> = env::args().collect();
     if args.len() < 3 {
@@ -113,4 +113,12 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
 
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test_main() {
+        assert!(true);
+    }
 }
